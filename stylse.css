@@ -1,0 +1,65 @@
+
+body {
+  background-color: #f7f4ed;
+}
+
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.myslides {
+  display: none;
+}
+
+/* .active {
+  color: #5a5959;
+} */
+
+.cycle-pager {
+  transition: background-color 0.6s ease;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 3.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+  }
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-100px)
+  }
+  100% {
+    transform: translateX(-250px); /* The image width */
+  }
+}
+@keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150px); /* The image width */
+  }
+}
+.imgpot {
+  animation: slide 20s linear infinite;
+}
+.imgpot2 {
+  /* transform-origin: top right; */
+  animation: slide2 20s linear infinite;
+
+}
